@@ -7,4 +7,6 @@
 
 ## 2. cvičení (1. 10. 2026)
 
-- Úkol 003: Hoď kostkou ve dvou verzích, [MyApp003Xml](MyApp003Xml) (XML + `findViewById`) a [MyApp003Compose](MyApp003Compose) (Jetpack Compose). Compose verze má navíc počítadlo a historii hodů.
+- Úkol 003: Hoď kostkou ve dvou verzích
+  - Aplikace 1: [MyApp003Xml](MyApp003Xml), XML layout + `findViewById`
+  - Aplikace 2: [MyApp003Compose](MyApp003Compose), Jetpack Compose, navíc počítadlo a historie hodů
