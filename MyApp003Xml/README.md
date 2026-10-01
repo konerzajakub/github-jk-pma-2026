@@ -2,7 +2,7 @@
 
 Šablona Empty Views Activity, prvky přes `findViewById`. Varianta v Compose: [MyApp003Compose](../MyApp003Compose).
 
-![Screenshot](screenshots/screenshot.png)
+![Screenshot](screenshots/screenshot-xml.png)
 
 ## Porovnání: jak se aktualizuje zobrazená kostka
 

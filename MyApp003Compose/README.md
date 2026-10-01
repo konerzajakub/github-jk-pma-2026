@@ -2,7 +2,7 @@
 
 Šablona Empty Activity, rozhraní definované v Kotlinu. Varianta v XML: [MyApp003Xml](../MyApp003Xml).
 
-![Screenshot](screenshots/screenshot.png)
+![Screenshot](screenshots/screenshot-compose.png)
 
 ## Porovnání: jak se aktualizuje zobrazená kostka
 
