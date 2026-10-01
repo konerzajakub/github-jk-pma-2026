@@ -2,4 +2,6 @@
     <string name="app_name">Hoď kostkou</string>
     <string name="title">Hoď kostkou</string>
     <string name="roll">Hodit</string>
+    <string name="roll_count">Počet hodů: %1$d</string>
+    <string name="history">Poslední hody:</string>
 </resources>

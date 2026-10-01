@@ -20,8 +20,17 @@ class MainActivity : AppCompatActivity() {
     private val animationSteps = 10
     private val stepDelayMs = 250L
 
+    // Kolik posledních hodů se ukazuje
+    private val historySize = 5
+
+    // Počet hodů a posledních pár výsledků (nejnovější první)
+    private var rollCount = 0
+    private var history = listOf<String>()
+
     private lateinit var tvDice: TextView
     private lateinit var btnRoll: Button
+    private lateinit var tvRollCount: TextView
+    private lateinit var tvHistory: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,7 +58,10 @@ class MainActivity : AppCompatActivity() {
         // Získání prvků z rozvržení podle ID
         tvDice = findViewById(R.id.tvDice)
         btnRoll = findViewById(R.id.btnRoll)
+        tvRollCount = findViewById(R.id.tvRollCount)
+        tvHistory = findViewById(R.id.tvHistory)
 
+        showStats()
         btnRoll.setOnClickListener { rollDice() }
     }
 
@@ -65,9 +77,21 @@ class MainActivity : AppCompatActivity() {
             }
 
             // Výsledný hod
-            tvDice.text = diceSymbols.random()
+            val result = diceSymbols.random()
+            tvDice.text = result
+
+            // Výsledek se přičte a přidá na začátek historie
+            rollCount++
+            history = (listOf(result) + history).take(historySize)
+            showStats()
 
             btnRoll.isEnabled = true
         }
+    }
+
+    // Vypsání počtu hodů a historie, texty se musí přepsat ručně
+    private fun showStats() {
+        tvRollCount.text = getString(R.string.roll_count, rollCount)
+        tvHistory.text = history.joinToString(" ")
     }
 }

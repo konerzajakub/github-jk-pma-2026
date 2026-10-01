@@ -36,4 +36,27 @@
         android:text="@string/roll"
         android:textSize="20sp" />
 
+    <!-- Počet hodů -->
+    <TextView
+        android:id="@+id/tvRollCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="20sp" />
+
+    <!-- Historie posledních hodů -->
+    <TextView
+        android:id="@+id/tvHistoryTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/history"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp" />
+
 </LinearLayout>
