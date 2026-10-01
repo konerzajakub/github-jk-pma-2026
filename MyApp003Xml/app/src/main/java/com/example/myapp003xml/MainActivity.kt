@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
-    // Unicode symboly pro hodnoty kostky 1–6
+    // Unicode symboly pro hodnoty kostky 1-6
     private val diceSymbols = listOf("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
 
     // Počet náhodných změn během animace a prodleva mezi nimi

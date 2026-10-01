@@ -14,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -28,12 +29,15 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
-// Unicode symboly pro hodnoty kostky 1–6
+// Unicode symboly pro hodnoty kostky 1-6
 private val diceSymbols = listOf("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
 
 // Počet náhodných změn během animace a prodleva mezi nimi
 private const val ANIMATION_STEPS = 10
 private const val STEP_DELAY_MS = 250L
+
+// Kolik posledních hodů se ukazuje
+private const val HISTORY_SIZE = 5
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -58,6 +62,10 @@ fun DiceScreen(modifier: Modifier = Modifier) {
     // Při změně stavu Compose obrazovku sám překreslí.
     var dice by remember { mutableStateOf(diceSymbols.first()) }
     var isRolling by remember { mutableStateOf(false) }
+
+    // Počet hodů a posledních pár výsledků (nejnovější první)
+    var rollCount by remember { mutableIntStateOf(0) }
+    var history by remember { mutableStateOf(listOf<String>()) }
     val scope = rememberCoroutineScope()
 
     // Prvky pod sebou, vystředěné na obrazovce
@@ -92,12 +100,35 @@ fun DiceScreen(modifier: Modifier = Modifier) {
                         delay(STEP_DELAY_MS)
                     }
                     dice = diceSymbols.random()
+
+                    // Výsledek se přičte a přidá na začátek historie
+                    rollCount++
+                    history = (listOf(dice) + history).take(HISTORY_SIZE)
+
                     isRolling = false
                 }
             }
         ) {
             Text(text = stringResource(R.string.roll), fontSize = 20.sp)
         }
+
+        // Počet hodů
+        Text(
+            text = stringResource(R.string.roll_count, rollCount),
+            fontSize = 20.sp,
+            modifier = Modifier.padding(top = 32.dp)
+        )
+
+        // Historie posledních hodů
+        Text(
+            text = stringResource(R.string.history),
+            fontSize = 20.sp,
+            modifier = Modifier.padding(top = 8.dp)
+        )
+        Text(
+            text = history.joinToString(" "),
+            fontSize = 36.sp
+        )
     }
 }
 

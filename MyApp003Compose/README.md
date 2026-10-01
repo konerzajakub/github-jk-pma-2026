@@ -1,19 +1,17 @@
-# Hoď kostkou — Jetpack Compose
+# Hoď kostkou - Jetpack Compose
 
-Šablona Empty Activity, rozhraní definované v Kotlinu. Varianta v XML: [MyApp003Xml](../MyApp003Xml).
+Verze v Jetpack Compose (Empty Activity). XML verze je v [MyApp003Xml](../MyApp003Xml).
 
 ![Screenshot](screenshots/screenshot-compose.png)
 
-## Porovnání: jak se aktualizuje zobrazená kostka
+## Porovnání
 
-| | XML + Kotlin (`MyApp003Xml`) | Jetpack Compose (`MyApp003Compose`) |
-| --- | --- | --- |
-| Rozhraní | `activity_main.xml` | funkce `DiceScreen()` v Kotlinu |
-| Přístup ke kostce | `findViewById(R.id.tvDice)` | žádný, kostka je jen `Text(text = dice)` |
-| Změna kostky | kód přímo přepíše `tvDice.text = …` | kód změní stav `dice`, Compose obrazovku sám překreslí |
-| Zakázání tlačítka | `btnRoll.isEnabled = false` | `enabled = !isRolling` podle stavu |
-| Prodleva 250 ms | korutina v `lifecycleScope` s `delay()` | korutina z `rememberCoroutineScope()` s `delay()` |
+V XML verzi je kostka TextView `tvDice`, který si najdu přes `findViewById`. Při hodu ho přepisuju přímo v kódu (`tvDice.text = ...`) a tlačítko vypínám přes `btnRoll.isEnabled`.
 
-XML varianta je imperativní: kód říká, který prvek se má změnit a jak.
-Compose je deklarativní: kód popisuje, jak obrazovka vypadá pro daný stav,
-a při změně stavu se vykreslí znovu.
+V Compose verzi nic hledat nemusím. Kostka je proměnná `dice` uložená jako stav (`mutableStateOf`). Při hodu měním jen tuhle proměnnou a Compose obrazovku překreslí sám. Tlačítko má `enabled = !isRolling`, takže se vypne samo, když běží hod.
+
+Čekání 250 ms je v obou verzích přes korutinu a `delay()`, aby aplikace nezamrzla.
+
+## Vylepšení
+
+Přidal jsem počítadlo hodů a historii posledních 5 hodů. Po každém hodu se počet zvýší o 1 a výsledek se přidá na začátek historie, starší hody nad 5 se zahodí. Obojí jsou zase jen stavy (`rollCount`, `history`), takže se zobrazí samy.
