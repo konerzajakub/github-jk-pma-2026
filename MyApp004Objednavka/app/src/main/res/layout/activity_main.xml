@@ -26,11 +26,18 @@
             android:textStyle="bold" />
 
         <!-- Výběr varianty -->
+        <TextView
+            android:id="@+id/tvVersions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/versions"
+            android:textStyle="bold" />
+
         <RadioGroup
             android:id="@+id/rgVariant"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
             android:checkedButton="@id/rbCurly">
 
             <RadioButton

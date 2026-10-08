@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Objednávka Tatsugiri</string>
     <string name="title">Objednávka Tatsugiri</string>
+    <string name="versions">Verze:</string>
     <string name="variant_curly">Curly (oranžová)</string>
     <string name="variant_droopy">Droopy (růžová)</string>
     <string name="variant_stretchy">Stretchy (žlutá)</string>

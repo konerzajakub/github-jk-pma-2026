@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Tatsugiri Order</string>
     <string name="title">Tatsugiri Order</string>
+    <string name="versions">Versions:</string>
     <string name="variant_curly">Curly (orange)</string>
     <string name="variant_droopy">Droopy (pink)</string>
     <string name="variant_stretchy">Stretchy (yellow)</string>
