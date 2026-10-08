@@ -11,4 +11,7 @@
     <string name="extra_express">Expresní doručení</string>
     <string name="order">Objednat</string>
     <string name="summary_title">Souhrn objednávky:</string>
+    <string name="summary_variant">Varianta: %1$s</string>
+    <string name="summary_extras">Doplňky: %1$s</string>
+    <string name="summary_no_extras">bez doplňků</string>
 </resources>
