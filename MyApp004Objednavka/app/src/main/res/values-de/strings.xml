@@ -12,7 +12,7 @@
     <string name="extra_express">Expresslieferung +150 CZK</string>
     <string name="order">Bestellen</string>
     <string name="summary_title">Bestellübersicht:</string>
-    <string name="summary">Variante: %1$s\nExtras: %2$s\nGrundpreis: %3$d CZK\nGesamtpreis: %4$d CZK</string>
+    <string name="summary">Variante: %s\nExtras: %s\nGrundpreis: %d CZK\nGesamtpreis: %d CZK</string>
     <string name="extras_separator">", "</string>
     <string name="summary_no_extras">keine Extras</string>
 </resources>

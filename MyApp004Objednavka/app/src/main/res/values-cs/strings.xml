@@ -12,7 +12,7 @@
     <string name="extra_express">Expresní doručení +150 Kč</string>
     <string name="order">Objednat</string>
     <string name="summary_title">Souhrn objednávky:</string>
-    <string name="summary">Varianta: %1$s\nDoplňky: %2$s\nZákladní cena: %3$d Kč\nCelková cena: %4$d Kč</string>
+    <string name="summary">Varianta: %s\nDoplňky: %s\nZákladní cena: %d Kč\nCelková cena: %d Kč</string>
     <string name="extras_separator">", "</string>
     <string name="summary_no_extras">bez doplňků</string>
 </resources>
