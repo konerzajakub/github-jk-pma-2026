@@ -3,16 +3,16 @@
     <string name="title">Objednávka Tatsugiri</string>
     <string name="versions">Verze:</string>
     <string name="variant_curly">Curly (oranžová)</string>
-    <string name="variant_droopy">Droopy (růžová)</string>
-    <string name="variant_stretchy">Stretchy (žlutá)</string>
+    <string name="variant_droopy">Droopy (růžová) +100 Kč</string>
+    <string name="variant_stretchy">Stretchy (žlutá) +200 Kč</string>
     <string name="tatsugiri_image">Obrázek vybrané varianty</string>
     <string name="extras">Doplňky:</string>
-    <string name="extra_poke_ball">Poké Ball</string>
-    <string name="extra_gift_box">Dárkové balení</string>
-    <string name="extra_express">Expresní doručení</string>
+    <string name="extra_poke_ball">Poké Ball +50 Kč</string>
+    <string name="extra_gift_box">Dárkové balení +80 Kč</string>
+    <string name="extra_express">Expresní doručení +150 Kč</string>
     <string name="order">Objednat</string>
     <string name="summary_title">Souhrn objednávky:</string>
-    <string name="summary">Varianta: %1$s\nDoplňky: %2$s</string>
+    <string name="summary">Varianta: %1$s\nDoplňky: %2$s\nZákladní cena: %3$d Kč\nCelková cena: %4$d Kč</string>
     <string name="extras_separator">", "</string>
     <string name="summary_no_extras">bez doplňků</string>
 </resources>

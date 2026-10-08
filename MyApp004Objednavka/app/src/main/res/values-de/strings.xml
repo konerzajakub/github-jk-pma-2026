@@ -3,16 +3,16 @@
     <string name="title">Tatsugiri-Bestellung</string>
     <string name="versions">Versionen:</string>
     <string name="variant_curly">Gebogen (orange)</string>
-    <string name="variant_droopy">Hängend (rosa)</string>
-    <string name="variant_stretchy">Gestreckt (gelb)</string>
+    <string name="variant_droopy">Hängend (rosa) +100 CZK</string>
+    <string name="variant_stretchy">Gestreckt (gelb) +200 CZK</string>
     <string name="tatsugiri_image">Bild der gewählten Variante</string>
     <string name="extras">Extras:</string>
-    <string name="extra_poke_ball">Pokéball</string>
-    <string name="extra_gift_box">Geschenkverpackung</string>
-    <string name="extra_express">Expresslieferung</string>
+    <string name="extra_poke_ball">Pokéball +50 CZK</string>
+    <string name="extra_gift_box">Geschenkverpackung +80 CZK</string>
+    <string name="extra_express">Expresslieferung +150 CZK</string>
     <string name="order">Bestellen</string>
     <string name="summary_title">Bestellübersicht:</string>
-    <string name="summary">Variante: %1$s\nExtras: %2$s</string>
+    <string name="summary">Variante: %1$s\nExtras: %2$s\nGrundpreis: %3$d CZK\nGesamtpreis: %4$d CZK</string>
     <string name="extras_separator">", "</string>
     <string name="summary_no_extras">keine Extras</string>
 </resources>

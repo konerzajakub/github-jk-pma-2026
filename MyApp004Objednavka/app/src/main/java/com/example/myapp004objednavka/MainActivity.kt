@@ -37,19 +37,42 @@ class MainActivity : AppCompatActivity() {
         binding.btnOrder.setOnClickListener { showSummary() }
     }
 
-    // Vypsání vybrané varianty a zaškrtnutých doplňků do souhrnu
+    // Vypsání vybrané varianty, doplňků a ceny do souhrnu
     private fun showSummary() {
-        val variant = when (binding.rgVariant.checkedRadioButtonId) {
-            binding.rbDroopy.id -> binding.rbDroopy.text
-            binding.rbStretchy.id -> binding.rbStretchy.text
-            else -> binding.rbCurly.text
+        val basePrice = 500
+        var total = basePrice
+
+        // Vybraná varianta a příplatek za ni
+        var variant = binding.rbCurly.text
+        if (binding.rbDroopy.isChecked) {
+            variant = binding.rbDroopy.text
+            total += 100
+        }
+        if (binding.rbStretchy.isChecked) {
+            variant = binding.rbStretchy.text
+            total += 200
         }
 
-        val extras = listOf(binding.cbPokeBall, binding.cbGiftBox, binding.cbExpress)
-            .filter { it.isChecked }
-            .joinToString(getString(R.string.extras_separator)) { it.text }
-            .ifEmpty { getString(R.string.summary_no_extras) }
+        // Zaškrtnuté doplňky a příplatky za ně
+        val extras = mutableListOf<String>()
+        if (binding.cbPokeBall.isChecked) {
+            extras.add(binding.cbPokeBall.text.toString())
+            total += 50
+        }
+        if (binding.cbGiftBox.isChecked) {
+            extras.add(binding.cbGiftBox.text.toString())
+            total += 80
+        }
+        if (binding.cbExpress.isChecked) {
+            extras.add(binding.cbExpress.text.toString())
+            total += 150
+        }
 
-        binding.tvSummary.text = getString(R.string.summary, variant, extras)
+        var extrasText = extras.joinToString(getString(R.string.extras_separator))
+        if (extras.isEmpty()) {
+            extrasText = getString(R.string.summary_no_extras)
+        }
+
+        binding.tvSummary.text = getString(R.string.summary, variant, extrasText, basePrice, total)
     }
 }
