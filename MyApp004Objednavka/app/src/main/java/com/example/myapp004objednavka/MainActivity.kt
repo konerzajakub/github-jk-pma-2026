@@ -47,10 +47,9 @@ class MainActivity : AppCompatActivity() {
 
         val extras = listOf(binding.cbPokeBall, binding.cbGiftBox, binding.cbExpress)
             .filter { it.isChecked }
-            .joinToString(", ") { it.text }
+            .joinToString(getString(R.string.extras_separator)) { it.text }
             .ifEmpty { getString(R.string.summary_no_extras) }
 
-        binding.tvSummary.text = getString(R.string.summary_variant, variant) + "\n" +
-            getString(R.string.summary_extras, extras)
+        binding.tvSummary.text = getString(R.string.summary, variant, extras)
     }
 }

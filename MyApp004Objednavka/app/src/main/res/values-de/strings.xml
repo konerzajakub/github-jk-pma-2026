@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tatsugiri-Bestellung</string>
+    <string name="title">Tatsugiri-Bestellung</string>
+    <string name="variant_curly">Gebogen (orange)</string>
+    <string name="variant_droopy">Hängend (rosa)</string>
+    <string name="variant_stretchy">Gestreckt (gelb)</string>
+    <string name="tatsugiri_image">Bild der gewählten Variante</string>
+    <string name="extras">Extras:</string>
+    <string name="extra_poke_ball">Pokéball</string>
+    <string name="extra_gift_box">Geschenkverpackung</string>
+    <string name="extra_express">Expresslieferung</string>
+    <string name="order">Bestellen</string>
+    <string name="summary_title">Bestellübersicht:</string>
+    <string name="summary">Variante: %1$s\nExtras: %2$s</string>
+    <string name="extras_separator">", "</string>
+    <string name="summary_no_extras">keine Extras</string>
+</resources>

@@ -1,17 +1,17 @@
 <resources>
-    <string name="app_name">Objednávka Tatsugiri</string>
-    <string name="title">Objednávka Tatsugiri</string>
-    <string name="variant_curly">Curly (oranžová)</string>
-    <string name="variant_droopy">Droopy (růžová)</string>
-    <string name="variant_stretchy">Stretchy (žlutá)</string>
-    <string name="tatsugiri_image">Obrázek vybrané varianty</string>
-    <string name="extras">Doplňky:</string>
+    <string name="app_name">Tatsugiri Order</string>
+    <string name="title">Tatsugiri Order</string>
+    <string name="variant_curly">Curly (orange)</string>
+    <string name="variant_droopy">Droopy (pink)</string>
+    <string name="variant_stretchy">Stretchy (yellow)</string>
+    <string name="tatsugiri_image">Image of the selected variant</string>
+    <string name="extras">Extras:</string>
     <string name="extra_poke_ball">Poké Ball</string>
-    <string name="extra_gift_box">Dárkové balení</string>
-    <string name="extra_express">Expresní doručení</string>
-    <string name="order">Objednat</string>
-    <string name="summary_title">Souhrn objednávky:</string>
-    <string name="summary_variant">Varianta: %1$s</string>
-    <string name="summary_extras">Doplňky: %1$s</string>
-    <string name="summary_no_extras">bez doplňků</string>
+    <string name="extra_gift_box">Gift box</string>
+    <string name="extra_express">Express delivery</string>
+    <string name="order">Order</string>
+    <string name="summary_title">Order summary:</string>
+    <string name="summary">Variant: %1$s\nExtras: %2$s</string>
+    <string name="extras_separator">", "</string>
+    <string name="summary_no_extras">no extras</string>
 </resources>
