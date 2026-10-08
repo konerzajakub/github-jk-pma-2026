@@ -1,19 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- Kořen se posouvá, aby se souhrn vešel i na menší displej -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Hlavní rozvržení: prvky pod sebou -->
+    <LinearLayout
+        android:id="@+id/llContent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Nadpis -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/title"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <!-- Výběr varianty -->
+        <RadioGroup
+            android:id="@+id/rgVariant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checkedButton="@id/rbCurly">
+
+            <RadioButton
+                android:id="@+id/rbCurly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/variant_curly" />
+
+            <RadioButton
+                android:id="@+id/rbDroopy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/variant_droopy" />
+
+            <RadioButton
+                android:id="@+id/rbStretchy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/variant_stretchy" />
+        </RadioGroup>
+
+        <!-- Obrázek vybrané varianty -->
+        <ImageView
+            android:id="@+id/ivTatsugiri"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/tatsugiri_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_tatsugiri_curly" />
+
+        <!-- Doplňky k objednávce -->
+        <TextView
+            android:id="@+id/tvExtras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/extras"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbPokeBall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/extra_poke_ball" />
+
+        <CheckBox
+            android:id="@+id/cbGiftBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/extra_gift_box" />
+
+        <CheckBox
+            android:id="@+id/cbExpress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/extra_express" />
+
+        <!-- Tlačítko pro objednání -->
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/order" />
+
+        <!-- Souhrn objednávky -->
+        <TextView
+            android:id="@+id/tvSummaryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/summary_title"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</ScrollView>
