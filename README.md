@@ -19,3 +19,7 @@
   - Výběr formy (Curly, Droopy, Stretchy) mění obrázek, checkboxy přidávají doplňky, tlačítko Objednat vypíše souhrn
   - Lokalizace: angličtina jako výchozí jazyk, čeština a němčina
   - Vylepšení: výpočet ceny, základní cena + příplatek za formu + příplatky za doplňky, celková cena v souhrnu ([screenshot](MyApp004Objednavka/screenshots/screenshot-price-en.png))
+
+## 4. cvičení (15. 10. 2026)
+
+- Úkol 005: objednávka V2 se dvěma obrazovkami [MyApp005ObjednavkaV2](MyApp005ObjednavkaV2), založený projekt, vychází z Úkolu 004

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Tatsugiri Order</string>
+    <string name="title">Tatsugiri Order</string>
+    <string name="versions">Versions:</string>
+    <string name="variant_curly">Curly (orange)</string>
+    <string name="variant_droopy">Droopy (pink) +100 CZK</string>
+    <string name="variant_stretchy">Stretchy (yellow) +200 CZK</string>
+    <string name="tatsugiri_image">Image of the selected variant</string>
+    <string name="extras">Extras:</string>
+    <string name="extra_poke_ball">Poké Ball +50 CZK</string>
+    <string name="extra_gift_box">Gift box +80 CZK</string>
+    <string name="extra_express">Express delivery +150 CZK</string>
+    <string name="order">Order</string>
+    <string name="summary_title">Order summary:</string>
+    <string name="summary">Variant: %s\nExtras: %s\nBase price: %d CZK\nTotal price: %d CZK</string>
+    <string name="extras_separator">", "</string>
+    <string name="summary_no_extras">no extras</string>
+</resources>
