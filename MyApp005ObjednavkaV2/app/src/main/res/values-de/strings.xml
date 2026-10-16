@@ -11,6 +11,7 @@
     <string name="extra_gift_box">Geschenkverpackung +80 CZK</string>
     <string name="extra_express">Expresslieferung +150 CZK</string>
     <string name="order">Bestellen</string>
+    <string name="price_total">Gesamtpreis: %d CZK</string>
     <string name="summary_title">Bestellübersicht:</string>
     <string name="summary">Variante: %s\nExtras: %s\nGrundpreis: %d CZK\nGesamtpreis: %d CZK</string>
     <string name="extras_separator">", "</string>

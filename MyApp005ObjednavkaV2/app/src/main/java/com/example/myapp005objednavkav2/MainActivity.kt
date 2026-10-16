@@ -24,55 +24,43 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // Změna varianty přepne obrázek
-        binding.rgVariant.setOnCheckedChangeListener { _, checkedId ->
-            val image = when (checkedId) {
-                binding.rbDroopy.id -> R.drawable.img_tatsugiri_droopy
-                binding.rbStretchy.id -> R.drawable.img_tatsugiri_stretchy
-                else -> R.drawable.img_tatsugiri_curly
-            }
-            binding.ivTatsugiri.setImageResource(image)
-        }
+        // Cena hned po spuštění, ještě před první změnou
+        updatePrice()
 
-        binding.btnOrder.setOnClickListener { showSummary() }
+        // Změna varianty přepočítá cenu
+        binding.rgVariant.setOnCheckedChangeListener { _, _ -> updatePrice() }
+
+        // Každý doplněk přepočítá cenu po kliknutí
+        binding.cbPokeBall.setOnClickListener { updatePrice() }
+        binding.cbGiftBox.setOnClickListener { updatePrice() }
+        binding.cbExpress.setOnClickListener { updatePrice() }
+
+        // Každá varianta přepne obrázek
+        binding.rbCurly.setOnClickListener {
+            binding.ivTatsugiri.setImageResource(R.drawable.img_tatsugiri_curly)
+        }
+        binding.rbDroopy.setOnClickListener {
+            binding.ivTatsugiri.setImageResource(R.drawable.img_tatsugiri_droopy)
+        }
+        binding.rbStretchy.setOnClickListener {
+            binding.ivTatsugiri.setImageResource(R.drawable.img_tatsugiri_stretchy)
+        }
     }
 
-    // Vypsání vybrané varianty, doplňků a ceny do souhrnu
-    private fun showSummary() {
-        val basePrice = 500
-        var total = basePrice
+    // Základní cena + příplatek za variantu + příplatky za doplňky
+    private fun updatePrice() {
+        var total = 500
 
-        // Vybraná varianta a příplatek za ni
-        var variant = binding.rbCurly.text
-        if (binding.rbDroopy.isChecked) {
-            variant = binding.rbDroopy.text
-            total += 100
-        }
-        if (binding.rbStretchy.isChecked) {
-            variant = binding.rbStretchy.text
-            total += 200
+        total += when (binding.rgVariant.checkedRadioButtonId) {
+            binding.rbDroopy.id -> 100
+            binding.rbStretchy.id -> 200
+            else -> 0
         }
 
-        // Zaškrtnuté doplňky a příplatky za ně
-        val extras = mutableListOf<String>()
-        if (binding.cbPokeBall.isChecked) {
-            extras.add(binding.cbPokeBall.text.toString())
-            total += 50
-        }
-        if (binding.cbGiftBox.isChecked) {
-            extras.add(binding.cbGiftBox.text.toString())
-            total += 80
-        }
-        if (binding.cbExpress.isChecked) {
-            extras.add(binding.cbExpress.text.toString())
-            total += 150
-        }
+        if (binding.cbPokeBall.isChecked) total += 50
+        if (binding.cbGiftBox.isChecked) total += 80
+        if (binding.cbExpress.isChecked) total += 150
 
-        var extrasText = extras.joinToString(getString(R.string.extras_separator))
-        if (extras.isEmpty()) {
-            extrasText = getString(R.string.summary_no_extras)
-        }
-
-        binding.tvSummary.text = getString(R.string.summary, variant, extrasText, basePrice, total)
+        binding.tvPrice.text = getString(R.string.price_total, total)
     }
 }

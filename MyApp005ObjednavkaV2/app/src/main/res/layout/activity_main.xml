@@ -1,123 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Kořen se posouvá, aby se souhrn vešel i na menší displej -->
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Hlavní rozvržení: každý prvek je ukotvený k rodiči nebo k sousednímu prvku -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
-    <!-- Hlavní rozvržení: prvky pod sebou -->
-    <LinearLayout
-        android:id="@+id/llContent"
-        android:layout_width="match_parent"
+    <!-- Nadpis -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:gravity="center"
+        android:text="@string/title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Nadpis -->
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/title"
-            android:textSize="28sp"
-            android:textStyle="bold" />
+    <!-- Výběr varianty -->
+    <TextView
+        android:id="@+id/tvVersions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/versions"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
 
-        <!-- Výběr varianty -->
-        <TextView
-            android:id="@+id/tvVersions"
+    <RadioGroup
+        android:id="@+id/rgVariant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rbCurly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvVersions">
+
+        <RadioButton
+            android:id="@+id/rbCurly"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/versions"
-            android:textStyle="bold" />
+            android:text="@string/variant_curly" />
 
-        <RadioGroup
-            android:id="@+id/rgVariant"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:checkedButton="@id/rbCurly">
-
-            <RadioButton
-                android:id="@+id/rbCurly"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/variant_curly" />
-
-            <RadioButton
-                android:id="@+id/rbDroopy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/variant_droopy" />
-
-            <RadioButton
-                android:id="@+id/rbStretchy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/variant_stretchy" />
-        </RadioGroup>
-
-        <!-- Obrázek vybrané varianty -->
-        <ImageView
-            android:id="@+id/ivTatsugiri"
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/tatsugiri_image"
-            android:scaleType="fitCenter"
-            android:src="@drawable/img_tatsugiri_curly" />
-
-        <!-- Doplňky k objednávce -->
-        <TextView
-            android:id="@+id/tvExtras"
+        <RadioButton
+            android:id="@+id/rbDroopy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/extras"
-            android:textStyle="bold" />
+            android:text="@string/variant_droopy" />
 
-        <CheckBox
-            android:id="@+id/cbPokeBall"
+        <RadioButton
+            android:id="@+id/rbStretchy"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/extra_poke_ball" />
+            android:text="@string/variant_stretchy" />
+    </RadioGroup>
 
-        <CheckBox
-            android:id="@+id/cbGiftBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/extra_gift_box" />
+    <!-- Obrázek, výška 0dp = vyplní místo mezi variantami a doplňky -->
+    <ImageView
+        android:id="@+id/ivTatsugiri"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="8dp"
+        android:contentDescription="@string/tatsugiri_image"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_tatsugiri_curly"
+        app:layout_constraintBottom_toTopOf="@id/tvExtras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgVariant" />
 
-        <CheckBox
-            android:id="@+id/cbExpress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/extra_express" />
+    <!-- Doplňky, skládají se odspodu nad cenu -->
+    <TextView
+        android:id="@+id/tvExtras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/extras"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cbPokeBall"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Tlačítko pro objednání -->
-        <Button
-            android:id="@+id/btnOrder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/order" />
+    <CheckBox
+        android:id="@+id/cbPokeBall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_poke_ball"
+        app:layout_constraintBottom_toTopOf="@id/cbGiftBox"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <!-- Souhrn objednávky -->
-        <TextView
-            android:id="@+id/tvSummaryTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="@string/summary_title"
-            android:textStyle="bold" />
+    <CheckBox
+        android:id="@+id/cbGiftBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_gift_box"
+        app:layout_constraintBottom_toTopOf="@id/cbExpress"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/tvSummary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp" />
+    <CheckBox
+        android:id="@+id/cbExpress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_express"
+        app:layout_constraintBottom_toTopOf="@id/tvPrice"
+        app:layout_constraintStart_toStartOf="parent" />
 
-    </LinearLayout>
-</ScrollView>
+    <!-- Celková cena, přepočítá se při každé změně -->
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="#81D4FA"
+        android:gravity="center"
+        android:padding="12dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/btnOrder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Total price: 500 CZK" />
+
+    <!-- Tlačítko pro potvrzení, ukotvené ke spodní hraně -->
+    <Button
+        android:id="@+id/btnOrder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

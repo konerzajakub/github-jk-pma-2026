@@ -11,6 +11,7 @@
     <string name="extra_gift_box">Dárkové balení +80 Kč</string>
     <string name="extra_express">Expresní doručení +150 Kč</string>
     <string name="order">Objednat</string>
+    <string name="price_total">Celková cena: %d Kč</string>
     <string name="summary_title">Souhrn objednávky:</string>
     <string name="summary">Varianta: %s\nDoplňky: %s\nZákladní cena: %d Kč\nCelková cena: %d Kč</string>
     <string name="extras_separator">", "</string>
