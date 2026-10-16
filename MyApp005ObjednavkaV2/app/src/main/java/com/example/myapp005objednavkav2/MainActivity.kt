@@ -1,5 +1,6 @@
 package com.example.myapp005objednavkav2
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -34,6 +35,25 @@ class MainActivity : AppCompatActivity() {
         binding.cbPokeBall.setOnClickListener { updatePrice() }
         binding.cbGiftBox.setOnClickListener { updatePrice() }
         binding.cbExpress.setOnClickListener { updatePrice() }
+
+        binding.btnOrder.setOnClickListener {
+            // Název vybrané varianty
+            val variant = when (binding.rgVariant.checkedRadioButtonId) {
+                binding.rbDroopy.id -> binding.rbDroopy.text.toString()
+                binding.rbStretchy.id -> binding.rbStretchy.text.toString()
+                else -> binding.rbCurly.text.toString()
+            }
+
+            // Intent na druhou obrazovku, data se přibalí jako klíč-hodnota
+            val intent = Intent(this, SummaryActivity::class.java)
+            intent.putExtra("EXTRA_VARIANT", variant)
+            intent.putExtra("EXTRA_TOTAL_PRICE", binding.tvPrice.text.toString())
+            intent.putExtra("EXTRA_HAS_POKE_BALL", binding.cbPokeBall.isChecked)
+            intent.putExtra("EXTRA_HAS_GIFT_BOX", binding.cbGiftBox.isChecked)
+            intent.putExtra("EXTRA_HAS_EXPRESS", binding.cbExpress.isChecked)
+
+            startActivity(intent)
+        }
 
         // Každá varianta přepne obrázek
         binding.rbCurly.setOnClickListener {

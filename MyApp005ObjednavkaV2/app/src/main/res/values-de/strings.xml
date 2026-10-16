@@ -12,8 +12,12 @@
     <string name="extra_express">Expresslieferung +150 CZK</string>
     <string name="order">Bestellen</string>
     <string name="price_total">Gesamtpreis: %d CZK</string>
-    <string name="summary_title">Bestellübersicht:</string>
-    <string name="summary">Variante: %s\nExtras: %s\nGrundpreis: %d CZK\nGesamtpreis: %d CZK</string>
-    <string name="extras_separator">", "</string>
     <string name="summary_no_extras">keine Extras</string>
+    <string name="summary_header">Bestellübersicht</string>
+    <string name="summary_variant">Gewählte Variante: %s</string>
+    <string name="summary_extras">Extras:</string>
+    <string name="terms_title">Geschäftsbedingungen</string>
+    <string name="terms_text">1. EINLEITENDE BESTIMMUNGEN\nDiese Geschäftsbedingungen regeln die gegenseitigen Rechte und Pflichten der Vertragsparteien, die im Zusammenhang mit oder auf Grundlage eines Kaufvertrags entstehen, der zwischen Verkäufer und Käufer über den Onlineshop geschlossen wird.\n\n2. ABSCHLUSS DES KAUFVERTRAGS\nDie Darstellung der Waren im Onlineshop dient nur zur Information und der Verkäufer ist nicht verpflichtet, über diese Waren einen Kaufvertrag zu schließen. Der Kaufvertrag entsteht, wenn der Käufer die Bestellung absendet und der Verkäufer sie annimmt.\n\n3. PREIS DER WARE UND ZAHLUNGSBEDINGUNGEN\nDen Preis der Ware und eventuelle Lieferkosten kann der Käufer per Überweisung auf das Konto des Verkäufers oder per Nachnahme bezahlen.\n\n4. RÜCKTRITT VOM KAUFVERTRAG\nDer Käufer nimmt zur Kenntnis, dass laut Bürgerlichem Gesetzbuch unter anderem kein Rücktritt von einem Kaufvertrag über Waren möglich ist, die nach den Wünschen des Käufers oder für ihn persönlich angepasst wurden.\n\n5. RECHTE AUS MANGELHAFTER LEISTUNG\nDie Rechte und Pflichten der Vertragsparteien bei mangelhafter Leistung richten sich nach den geltenden allgemein verbindlichen Vorschriften.\n\n6. SCHUTZ PERSONENBEZOGENER DATEN\nDer Schutz personenbezogener Daten eines Käufers, der eine natürliche Person ist, erfolgt gemäß der DSGVO. Der Käufer stimmt der Verarbeitung folgender Daten zu: Vor- und Nachname, Wohnadresse, Identifikationsnummer, Steuernummer, E-Mail-Adresse und Telefonnummer.\n\n7. SCHLUSSBESTIMMUNGEN\nEnthält das Vertragsverhältnis ein internationales (ausländisches) Element, vereinbaren die Parteien, dass es tschechischem Recht unterliegt. Die Rechte der Verbraucher aus allgemein verbindlichen Rechtsvorschriften bleiben davon unberührt.</string>
+    <string name="back">Zurück zur Bearbeitung</string>
+    <string name="unknown_variant">Unbekannte Variante</string>
 </resources>

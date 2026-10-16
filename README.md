@@ -22,4 +22,5 @@
 
 ## 4. cvičení (15. 10. 2026)
 
-- Úkol 005: objednávka V2 se dvěma obrazovkami [MyApp005ObjednavkaV2](MyApp005ObjednavkaV2), založený projekt, vychází z Úkolu 004
+- Úkol 005: objednávka V2 se dvěma obrazovkami [MyApp005ObjednavkaV2](MyApp005ObjednavkaV2)
+  - Cena se přepočítá při každé změně, tlačítko Objednat pošle výběr přes Intent na obrazovku se souhrnem a obchodními podmínkami

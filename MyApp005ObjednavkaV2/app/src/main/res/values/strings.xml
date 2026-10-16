@@ -12,8 +12,12 @@
     <string name="extra_express">Express delivery +150 CZK</string>
     <string name="order">Order</string>
     <string name="price_total">Total price: %d CZK</string>
-    <string name="summary_title">Order summary:</string>
-    <string name="summary">Variant: %s\nExtras: %s\nBase price: %d CZK\nTotal price: %d CZK</string>
-    <string name="extras_separator">", "</string>
     <string name="summary_no_extras">no extras</string>
+    <string name="summary_header">Order summary</string>
+    <string name="summary_variant">Selected variant: %s</string>
+    <string name="summary_extras">Extras:</string>
+    <string name="terms_title">Terms and conditions</string>
+    <string name="terms_text">1. INTRODUCTORY PROVISIONS\nThese terms and conditions govern the mutual rights and obligations of the contracting parties arising in connection with or on the basis of a purchase contract concluded between the seller and the buyer through the online shop.\n\n2. CONCLUSION OF THE PURCHASE CONTRACT\nAll presentation of goods in the web interface of the shop is for information only and the seller is not obliged to conclude a purchase contract for these goods. The purchase contract is concluded when the buyer sends the order and the seller accepts it.\n\n3. PRICE OF GOODS AND PAYMENT TERMS\nThe buyer can pay the price of the goods and any delivery costs by bank transfer to the seller\'s account or by cash on delivery.\n\n4. WITHDRAWAL FROM THE PURCHASE CONTRACT\nThe buyer acknowledges that, according to the Civil Code, it is not possible to withdraw from a purchase contract for goods that were modified according to the buyer\'s wishes or for the buyer personally.\n\n5. RIGHTS FROM DEFECTIVE PERFORMANCE\nThe rights and obligations of the contracting parties regarding defective performance are governed by the relevant generally binding regulations.\n\n6. PERSONAL DATA PROTECTION\nThe personal data of a buyer who is a natural person are protected in accordance with the GDPR. The buyer agrees to the processing of the following personal data: name and surname, address, identification number, tax identification number, e-mail address and telephone number.\n\n7. FINAL PROVISIONS\nIf the relationship based on the purchase contract contains an international (foreign) element, the parties agree that the relationship is governed by Czech law. This does not affect the consumer\'s rights under generally binding legal regulations.</string>
+    <string name="back">Back to editing</string>
+    <string name="unknown_variant">Unknown variant</string>
 </resources>
