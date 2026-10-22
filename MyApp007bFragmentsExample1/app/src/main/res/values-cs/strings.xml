@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Průvodce Tatsugiri</string>
+    <string name="title">Průvodce Tatsugiri</string>
+    <string name="menu_gallery">Galerie</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_quiz">Kvíz</string>
+    <string name="form_image">Obrázek formy Tatsugiri</string>
+    <string name="form_curly">Curly</string>
+    <string name="form_droopy">Droopy</string>
+    <string name="form_stretchy">Stretchy</string>
+    <string name="previous">Předchozí</string>
+    <string name="next">Další</string>
+    <string name="info_number">Číslo v Pokédexu: 978</string>
+    <string name="info_type">Typ: Dragon / Water</string>
+    <string name="info_ability">Schopnost: Commander</string>
+    <string name="info_forms">Formy: Curly (oranžová), Droopy (růžová), Stretchy (žlutá)</string>
+    <string name="quiz_question">Která forma to je?</string>
+    <string name="quiz_score">Skóre: %1$d / %2$d</string>
+    <string name="quiz_correct">Správně!</string>
+    <string name="quiz_wrong">Špatně!</string>
+</resources>

@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Tatsugiri Guide</string>
+    <string name="title">Tatsugiri Guide</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_quiz">Quiz</string>
+    <string name="form_image">Image of a Tatsugiri form</string>
+    <string name="form_curly">Curly</string>
+    <string name="form_droopy">Droopy</string>
+    <string name="form_stretchy">Stretchy</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="info_number">Pokédex number: 978</string>
+    <string name="info_type">Type: Dragon / Water</string>
+    <string name="info_ability">Ability: Commander</string>
+    <string name="info_forms">Forms: Curly (orange), Droopy (pink), Stretchy (yellow)</string>
+    <string name="quiz_question">Which form is this?</string>
+    <string name="quiz_score">Score: %1$d / %2$d</string>
+    <string name="quiz_correct">Correct!</string>
+    <string name="quiz_wrong">Wrong!</string>
+</resources>

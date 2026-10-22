@@ -24,3 +24,9 @@
 
 - Úkol 005: objednávka V2 se dvěma obrazovkami [MyApp005ObjednavkaV2](MyApp005ObjednavkaV2)
   - Cena se přepočítá při každé změně, tlačítko Objednat pošle výběr přes Intent na obrazovku se souhrnem a obchodními podmínkami
+
+## 5. cvičení (22. 10. 2026)
+
+- Úkol 007: fragmenty
+  - Aplikace 1: [MyApp007aFragments](MyApp007aFragments), dvě tlačítka přepínají dva prázdné fragmenty
+  - Aplikace 2: [MyApp007bFragmentsExample1](MyApp007bFragmentsExample1), průvodce Pokémonem Tatsugiri se třemi fragmenty (galerie, info, kvíz)
