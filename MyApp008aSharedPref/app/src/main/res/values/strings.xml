@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">MyApp008aSharedPref</string>
+    <string name="title">Player profile</string>
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_settings">Settings</string>
+    <string name="nickname">Nickname: %s</string>
+    <string name="no_nickname">(not set)</string>
+    <string name="hardcore_on">Hardcore mode: on</string>
+    <string name="hardcore_off">Hardcore mode: off</string>
+    <string name="hint_nickname">Player nickname</string>
+    <string name="switch_hardcore">Hardcore mode</string>
+    <string name="btn_save">Save (SharedPreferences)</string>
+    <string name="saved">Saved with SharedPreferences</string>
+    <string name="undo">Undo</string>
+    <string name="undone">Previous values restored</string>
+    <string name="dice_label">Roll the dice while saving</string>
+    <string name="btn_roll">Roll</string>
+    <string name="rolls">Rolls: %d</string>
+</resources>
