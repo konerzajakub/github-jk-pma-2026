@@ -30,3 +30,10 @@
 - Úkol 007: fragmenty
   - Aplikace 1: [MyApp007aFragments](MyApp007aFragments), dvě tlačítka přepínají dva prázdné fragmenty
   - Aplikace 2: [MyApp007bFragmentsExample1](MyApp007bFragmentsExample1), průvodce Pokémonem Tatsugiri se třemi fragmenty (galerie, info, kvíz)
+
+## 6. cvičení (5. 11. 2026)
+
+- Úkol 008: ukládání dat, aplikace Hráčský profil ve dvou verzích
+  - [MyApp008aSharedPref](MyApp008aSharedPref): ukládání přes SharedPreferences s `Thread.sleep(3000)`, aplikace se na 3 s zasekne, výsledek ukáže Toast
+  - [MyApp008bDataStore](MyApp008bDataStore): ukládání přes DataStore s `delay(3000)`, aplikace dál reaguje, výsledek ukáže Snackbar s tlačítkem Zpět
+  - Navíc: kostka v nastavení, která s ukládáním nesouvisí. Ve verzi B jde házet i během ukládání

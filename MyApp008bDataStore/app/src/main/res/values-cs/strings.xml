@@ -1,0 +1,18 @@
+<resources>
+    <string name="title">Hráčský profil</string>
+    <string name="menu_dashboard">Přehled</string>
+    <string name="menu_settings">Nastavení</string>
+    <string name="nickname">Přezdívka: %s</string>
+    <string name="no_nickname">(nevyplněno)</string>
+    <string name="hardcore_on">Hardcore režim: zapnutý</string>
+    <string name="hardcore_off">Hardcore režim: vypnutý</string>
+    <string name="hint_nickname">Herní přezdívka</string>
+    <string name="switch_hardcore">Hardcore režim</string>
+    <string name="btn_save">Uložit (DataStore)</string>
+    <string name="saved">Uloženo přes DataStore</string>
+    <string name="undo">Zpět</string>
+    <string name="undone">Vráceno na předchozí hodnoty</string>
+    <string name="dice_label">Hoď si kostkou, než se to uloží</string>
+    <string name="btn_roll">Hodit</string>
+    <string name="rolls">Hodů: %d</string>
+</resources>
