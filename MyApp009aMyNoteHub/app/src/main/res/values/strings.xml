@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyNoteHub</string>
+    <string name="title_notes">My notes</string>
+    <string name="search_hint">Search notes…</string>
+    <string name="add_note">Add note</string>
+    <string name="edit_note">Edit note</string>
+    <string name="delete_note">Delete note</string>
+    <string name="hint_title">Note title</string>
+    <string name="hint_content">Note content</string>
+    <string name="label_category">Category</string>
+    <string name="btn_save_note">Save note</string>
+    <string name="btn_save_changes">Save changes</string>
+    <string name="fill_both">Fill in both title and content</string>
+    <string name="created_at">Created: %s</string>
+    <string name="note_id">ID: %d</string>
+    <string name="delete_question">Do you really want to delete this note?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string-array name="categories">
+        <item>General</item>
+        <item>School</item>
+        <item>Work</item>
+        <item>Personal</item>
+    </string-array>
+</resources>

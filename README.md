@@ -37,3 +37,10 @@
   - [MyApp008aSharedPref](MyApp008aSharedPref): ukládání přes SharedPreferences s `Thread.sleep(3000)`, aplikace se na 3 s zasekne, výsledek ukáže Toast
   - [MyApp008bDataStore](MyApp008bDataStore): ukládání přes DataStore s `delay(3000)`, aplikace dál reaguje, výsledek ukáže Snackbar s tlačítkem Zpět
   - Navíc: kostka v nastavení, která s ukládáním nesouvisí. Ve verzi B jde házet i během ukládání
+
+## 7. cvičení (12. 11. 2026)
+
+- Úkol 009: poznámkovník s databází Room [MyApp009aMyNoteHub](MyApp009aMyNoteHub)
+  - Přidání, zobrazení, editace a mazání poznámek (CRUD), mazání se potvrzuje dialogem
+  - Kategorie a datum vytvoření, přidané migrací databáze z verze 1 na 2
+  - Hledání v názvu a obsahu poznámek

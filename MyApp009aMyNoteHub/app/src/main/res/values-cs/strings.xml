@@ -1,0 +1,24 @@
+<resources>
+    <string name="title_notes">Moje poznámky</string>
+    <string name="search_hint">Hledat poznámky…</string>
+    <string name="add_note">Přidat poznámku</string>
+    <string name="edit_note">Upravit poznámku</string>
+    <string name="delete_note">Smazat poznámku</string>
+    <string name="hint_title">Název poznámky</string>
+    <string name="hint_content">Obsah poznámky</string>
+    <string name="label_category">Kategorie</string>
+    <string name="btn_save_note">Uložit poznámku</string>
+    <string name="btn_save_changes">Uložit změny</string>
+    <string name="fill_both">Vyplň název i obsah</string>
+    <string name="created_at">Vytvořeno: %s</string>
+    <string name="note_id">ID: %d</string>
+    <string name="delete_question">Opravdu chcete smazat tuto poznámku?</string>
+    <string name="yes">Ano</string>
+    <string name="no">Ne</string>
+    <string-array name="categories">
+        <item>Obecné</item>
+        <item>Škola</item>
+        <item>Práce</item>
+        <item>Osobní</item>
+    </string-array>
+</resources>
