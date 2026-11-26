@@ -44,3 +44,9 @@
   - Přidání, zobrazení, editace a mazání poznámek (CRUD), mazání se potvrzuje dialogem
   - Kategorie a datum vytvoření, přidané migrací databáze z verze 1 na 2
   - Hledání v názvu a obsahu poznámek
+
+## 8. cvičení (26. 11. 2026)
+
+- Úkol 010: sdílený seznam úkolů s cloudovou databází Firestore [MyApp010aSharedTaskList](MyApp010aSharedTaskList)
+  - Přidání, odškrtnutí a smazání úkolu, seznam se mezi zařízeními synchronizuje v reálném čase
+  - Soubor `google-services.json` v repozitáři není, pro spuštění je potřeba vlastní Firebase projekt
